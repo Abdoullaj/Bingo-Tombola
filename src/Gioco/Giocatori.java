@@ -2,8 +2,19 @@ package Gioco;
 
 public class Giocatori {
 	Cartella [] listaCartella = new Cartella [5];
-	int numeroCartelle =0;
+	int numeroCartelle = 0 ;
 	char gioco;
+	
+	public Giocatori(char gioco) {
+		
+		this.gioco = gioco;
+		compraCartella();
+		
+	}
+	
+	public Cartella [] getListaCartella() {
+		return listaCartella;
+	}
 	
 	public void compraCartella() {
 		switch(gioco) {
@@ -13,6 +24,8 @@ public class Giocatori {
 		case 'b':
 			creaCartellaBingo();
 			break;
+			default :
+				System.out.println("Specificare gioco");
 		}
 	}
 	
